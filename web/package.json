@@ -1,0 +1,8 @@
+{
+  "name": "notes-web",
+  "version": "1.0.0",
+  "description": "Static frontend built then served by nginx.",
+  "scripts": {
+    "build": "node build.js"
+  }
+}

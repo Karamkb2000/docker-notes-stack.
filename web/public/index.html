@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Notes<span>·stack</span></div>
+    <div class="badge" id="api-badge"><span class="dot"></span> checking…</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Your <span class="accent">notes</span>, powered by microservices</h1>
+      <p class="sub">web → api → postgres, with a redis-backed worker counting in the background.</p>
+    </section>
+
+    <section class="stats" id="stats">
+      <div class="stat">
+        <div class="n" id="stat-notes">–</div>
+        <div class="l">notes created</div>
+      </div>
+      <div class="stat">
+        <div class="n" id="stat-ticks">–</div>
+        <div class="l">worker ticks</div>
+      </div>
+    </section>
+
+    <section class="card composer">
+      <form id="note-form">
+        <input id="note-input" placeholder="Write a note…" autocomplete="off" maxlength="200" />
+        <button type="submit">Add note</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>All notes</h2>
+      <div id="notes" class="notes">
+        <p class="muted" id="notes-status">Loading…</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>notes-stack · built at __BUILD_TIME__</footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
